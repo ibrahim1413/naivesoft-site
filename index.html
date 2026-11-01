@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='icon' href='/favicon.png' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@700&display=swap' rel='stylesheet' />
+    <title>Naive Soft – Digital Agency in Dhaka</title>
+    <meta name='description' content='Websites, eCommerce, apps, branding and marketing by one 360° team in Dhaka.' />
+    <meta property='og:title' content='Naive Soft – Digital Agency in Dhaka' />
+    <meta property='og:description' content='Websites, eCommerce, apps, branding and marketing.' />
+    <meta property='og:image' content='https://naivesoft.net/og.png' />
+    <script type='application/ld+json'>
+      { "@context": "https://schema.org", "@type": "Organization", "name": "Naive Soft",
+        "url": "https://naivesoft.net", "logo": "https://naivesoft.net/logo.png" }
+    </script>
+    <script>
+      /* পেজ আঁকার আগেই সংরক্ষিত থিম বসায়, যাতে ডার্ক মোডে সাদা ঝলক না আসে */
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id='root'></div>
+    <script type='module' src='/src/main.jsx'></script>
+  </body>
+</html>
