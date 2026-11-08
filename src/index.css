@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+
+  --breakpoint-md: 53.8125rem;
+  --breakpoint-lg: 68.8125rem;
+
+  --color-ink: #0a1536;
+  --color-royal: #234497;
+  --color-logo-blue: #3585c6;
+  --color-sky: #5ba7e3;
+  --color-sky-soft: #7fb8ea;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --radius-card: 24px;
+  --shadow-soft: 0 24px 48px -24px rgba(10, 21, 54, 0.18);
+  --ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --leading-natural: normal; 
+
+  --animate-orb: orb 16s ease-in-out infinite alternate;
+  --animate-shimmer: shimmer 6s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee-slow: marquee 60s linear infinite;
+
+  @keyframes orb { to { transform: translate(-140px, 180px) scale(1.25); } }
+  @keyframes shimmer { to { background-position: 200% 0; } }
+  @keyframes float { 50% { transform: translateY(-14px); } }
+  @keyframes blink { 50% { border-color: transparent; } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+
+:root {
+  --bg: #f3f7fc;
+  --surface: #ffffff;
+  --text: #0a1536;
+  --muted: #55607a;
+  --hair: #dce5f2;
+  --accent: #234497;
+}
+[data-theme='dark'] {
+  --bg: #070f29;
+  --surface: #0f1c45;
+  --text: #e8eef9;
+  --muted: #a9b6d6;
+  --hair: #22356b;
+  --accent: #7fb8ea;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-page: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--text);
+  --color-muted: var(--muted);
+  --color-hair: var(--hair);
+  --color-accent: var(--accent);
+}
+
+
+@layer base {
+  h1, h2, h3 { @apply font-display font-medium tracking-[-0.035em]; }
+  h1 { @apply text-[44px] leading-none md:text-[88px]; }
+  h2 { @apply text-[38px] leading-[1.05] md:text-[56px]; }
+  h3 { @apply text-[30px] tracking-[-0.02em]; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
