@@ -1,0 +1,42 @@
+:root {
+  --ink: #0A1536;
+  --royal: #234497;
+  --logo-blue: #3585C6;
+  --sky: #5BA7E3;
+  --sky-soft: #7FB8EA;
+
+  --bg: #F3F7FC;
+  --surface: #FFFFFF;
+  --text: #0A1536;
+  --muted: #55607A;
+  --hair: #DCE5F2;
+  --accent: #234497;
+
+  --radius: 24px;
+  --radius-pill: 999px;
+  --shadow: 0 24px 48px -24px rgba(10, 21, 54, 0.18);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 48px;
+  --sp-6: 72px;
+  --sp-7: 120px;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+[data-theme='dark'] {
+  --bg: #070F29;
+  --surface: #0F1C45;
+  --text: #E8EEF9;
+  --muted: #A9B6D6;
+  --hair: #22356B;
+  --accent: #7FB8EA;
+  color-scheme: dark;
+}
